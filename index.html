@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EstateHub | Find Your Dream Property</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="logo">Estate<span>Hub</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    <nav id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#properties">Properties</a>
+      <a href="#categories">Categories</a>
+      <a href="#enquiry">Enquiry</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#enquiry">List Property</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <span class="eyebrow">BUY • SELL • RENT</span>
+    <h1>Find a place you will <span>love to live.</span></h1>
+    <p>Discover verified Homes, Apartments, Villas and Plots in prime locations.</p>
+
+    <div class="search-panel">
+      <div class="search-field">
+        <label for="searchInput">Location or property</label>
+        <input id="searchInput" type="text" placeholder="e.g. Pune, Villa">
+      </div>
+      <div class="search-field">
+        <label for="typeFilter">Property type</label>
+        <select id="typeFilter">
+          <option value="all">All Types</option>
+          <option value="Apartment">Apartment</option>
+          <option value="Villa">Villa</option>
+          <option value="House">House</option>
+          <option value="Plot">Plot</option>
+        </select>
+      </div>
+      <button class="primary-btn" id="searchBtn">Search Properties</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="categories">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow dark">EXPLORE</span>
+      <h2>Browse by category</h2>
+    </div>
+    <p>Choose a property style that fits your lifestyle and budget.</p>
+  </div>
+
+  <div class="category-grid">
+    <button class="category-card" data-category="Apartment"><span>🏢</span><strong>Apartments</strong><small>Modern city living</small></button>
+    <button class="category-card" data-category="Villa"><span>🏡</span><strong>Villas</strong><small>Private luxury homes</small></button>
+    <button class="category-card" data-category="House"><span>🏠</span><strong>Houses</strong><small>Comfortable family homes</small></button>
+    <button class="category-card" data-category="Plot"><span>🌳</span><strong>Plots</strong><small>Build your future</small></button>
+  </div>
+</section>
+
+<section class="section properties-section" id="properties">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow dark">FEATURED LISTINGS</span>
+      <h2>Properties you will love</h2>
+    </div>
+    <p id="resultCount">6 Properties Available</p>
+  </div>
+
+  <div class="property-grid" id="propertyGrid">
+
+    <article class="property-card" data-type="Apartment" data-location="lonavala" data-name="Modern City Apartment">
+      <div class="property-image">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Modern apartment">
+        <span class="status">For Sale</span>
+        <button class="favorite" aria-label="Favorite property">♡</button>
+      </div>
+      <div class="property-body">
+        <div class="property-type">APARTMENT</div>
+        <h3>Modern City Apartment</h3>
+        <p class="location">📍 Nangargaon, Lonavala</p>
+        <div class="features"><span>🛏 3 Beds</span><span>🚿 2 Baths</span><span>📐 1450 sq.ft</span></div>
+        <div class="property-footer"><strong>₹85 Lakh</strong><button class="details-btn" data-property="Modern City Apartment">Enquire</button></div>
+      </div>
+    </article>
+
+    <article class="property-card" data-type="Villa" data-location="Lonavala" data-name="Luxury Garden Villa">
+      <div class="property-image">
+        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=900&q=80" alt="Luxury villa">
+        <span class="status">For Sale</span>
+        <button class="favorite" aria-label="Favorite property">♡</button>
+      </div>
+      <div class="property-body">
+        <div class="property-type">VILLA</div>
+        <h3>Luxury Garden Villa</h3>
+        <p class="location">📍 Lonavala, Maharashtra</p>
+        <div class="features"><span>🛏 4 Beds</span><span>🚿 4 Baths</span><span>📐 2800 sq.ft</span></div>
+        <div class="property-footer"><strong>₹2.4 Cr</strong><button class="details-btn" data-property="Luxury Garden Villa">Enquire</button></div>
+      </div>
+    </article>
+
+    <article class="property-card" data-type="House" data-location="Bangalore" data-name="Premium Family House">
+      <div class="property-image">
+        <img src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=900&q=80" alt="Family house">
+        <span class="status">For Sale</span>
+        <button class="favorite" aria-label="Favorite property">♡</button>
+      </div>
+      <div class="property-body">
+        <div class="property-type">HOUSE</div>
+        <h3>Premium Family House</h3>
+        <p class="location">📍 Whitefield, Bangalore</p>
+        <div class="features"><span>🛏 4 Beds</span><span>🚿 3 Baths</span><span>📐 2200 sq.ft</span></div>
+        <div class="property-footer"><strong>₹1.8 Cr</strong><button class="details-btn" data-property="Premium Family House">Enquire</button></div>
+      </div>
+    </article>
+
+    <article class="property-card" data-type="Apartment" data-location="Mumbai" data-name="Elegant Downtown Apartment">
+      <div class="property-image">
+        <img src="https://images.unsplash.com/photo-1502672023488-70e25813eb80?auto=format&fit=crop&w=900&q=80" alt="Elegant apartment">
+        <span class="status rent">For Rent</span>
+        <button class="favorite" aria-label="Favorite property">♡</button>
+      </div>
+      <div class="property-body">
+        <div class="property-type">APARTMENT</div>
+        <h3>Elegant Downtown Apartment</h3>
+        <p class="location">📍 Andheri, Mumbai</p>
+        <div class="features"><span>🛏 2 Beds</span><span>🚿 2 Baths</span><span>📐 1100 sq.ft</span></div>
+        <div class="property-footer"><strong>₹55K/month</strong><button class="details-btn" data-property="Elegant Downtown Apartment">Enquire</button></div>
+      </div>
+    </article>
+
+    <article class="property-card" data-type="Plot" data-location="Pune" data-name="Residential Plot">
+      <div class="property-image">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80" alt="Residential plot">
+        <span class="status">For Sale</span>
+        <button class="favorite" aria-label="Favorite property">♡</button>
+      </div>
+      <div class="property-body">
+        <div class="property-type">PLOT</div>
+        <h3>Residential Plot</h3>
+        <p class="location">📍 Wagholi, Pune</p>
+        <div class="features"><span>🌳 Clear Title</span><span>🛣 Road Access</span><span>📐 2400 sq.ft</span></div>
+        <div class="property-footer"><strong>₹48 Lakh</strong><button class="details-btn" data-property="Residential Plot">Enquire</button></div>
+      </div>
+    </article>
+
+    <article class="property-card" data-type="House" data-location="Hyderabad" data-name="Contemporary Family Home">
+      <div class="property-image">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" alt="Contemporary family home">
+        <span class="status">For Sale</span>
+        <button class="favorite" aria-label="Favorite property">♡</button>
+      </div>
+      <div class="property-body">
+        <div class="property-type">HOUSE</div>
+        <h3>Contemporary Family Home</h3>
+        <p class="location">📍 Gachibowli, Hyderabad</p>
+        <div class="features"><span>🛏 3 Beds</span><span>🚿 3 Baths</span><span>📐 1900 sq.ft</span></div>
+        <div class="property-footer"><strong>₹1.25 Cr</strong><button class="details-btn" data-property="Contemporary Family Home">Enquire</button></div>
+      </div>
+    </article>
+
+  </div>
+  <div class="no-results" id="noResults">No properties match your search. Try another location or category.</div>
+</section>
+
+<section class="sell-banner">
+  <div class="container sell-inner">
+    <div>
+      <span class="eyebrow">SELL WITH CONFIDENCE</span>
+      <h2>Have a property to sell?</h2>
+      <p>Connect with genuine buyers and showcase your property to the right audience.</p>
+    </div>
+    <a href="#enquiry" class="light-btn">List Your Property</a>
+  </div>
+</section>
+
+<section class="section enquiry-section" id="enquiry">
+  <div class="form-wrapper">
+    <div class="form-intro">
+      <span class="eyebrow dark">GET IN TOUCH</span>
+      <h2>Tell us what you're looking for.</h2>
+      <p>Fill out the form and our property consultant will contact you with suitable options.</p>
+      <div class="mini-points"><span>✓ Verified listings</span><span>✓ Expert guidance</span><span>✓ Quick response</span></div>
+    </div>
+
+    <form id="enquiryForm" class="enquiry-form">
+      <div class="two-col">
+        <div><label for="name">Full Name</label><input id="name" required placeholder="Your name"></div>
+        <div><label for="phone">Phone</label><input id="phone" required type="tel" placeholder="+91 98765 43210"></div>
+      </div>
+      <div><label for="email">Email</label><input id="email" required type="email" placeholder="you@example.com"></div>
+      <div class="two-col">
+        <div>
+          <label for="propertySelect">Interested Property</label>
+          <select id="propertySelect">
+            <option value="">Select property</option>
+            <option>Modern City Apartment</option>
+            <option>Luxury Garden Villa</option>
+            <option>Premium Family House</option>
+            <option>Elegant Downtown Apartment</option>
+            <option>Residential Plot</option>
+            <option>Contemporary Family Home</option>
+          </select>
+        </div>
+        <div>
+          <label for="purpose">Looking to</label>
+          <select id="purpose">
+            <option>Buy</option>
+            <option>Rent</option>
+            <option>Sell</option>
+          </select>
+        </div>
+      </div>
+      <div><label for="message">Message</label><textarea id="message" rows="5" placeholder="Tell us your requirements..."></textarea></div>
+      <button class="primary-btn full" type="submit">Send Enquiry</button>
+      <p class="form-message" id="formMessage"></p>
+    </form>
+  </div>
+</section>
+
+<section class="section contact-section" id="contact">
+  <div class="section-heading centered">
+    <div>
+      <span class="eyebrow dark">CONTACT US</span>
+      <h2>Let's find your next address.</h2>
+    </div>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-card"><span>📍</span><h3>Visit Us</h3><p>MG Road, Pune, Maharashtra</p></div>
+    <div class="contact-card"><span>📞</span><h3>Call Us</h3><p>+91 7767888089</p></div>
+    <div class="contact-card"><span>✉️</span><h3>Email Us</h3><p>info@estatehub.com</p></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div><a href="#home" class="logo footer-logo">Estate<span>Hub</span></a><p>Your trusted partner for buying, selling and renting properties.</p></div>
+    <p>© 2026 EstateHub. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
